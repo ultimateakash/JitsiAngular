@@ -1,5 +1,4 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 declare var JitsiMeetExternalAPI: any;
 
@@ -8,9 +7,8 @@ declare var JitsiMeetExternalAPI: any;
     templateUrl: './jitsi.component.html',
     styleUrls: ['./jitsi.component.css']
 })
-export class JitsiComponent implements OnInit, OnDestroy, AfterViewInit {
+export class JitsiComponent implements OnInit, AfterViewInit {
 
-    private unsubscribe$ = new Subject();
     domain: string = "meet.jit.si";
     room: any;
     options: any;
@@ -117,9 +115,4 @@ export class JitsiComponent implements OnInit, OnDestroy, AfterViewInit {
             this.isVideoMuted = !this.isVideoMuted;
         }
     }
-
-    ngOnDestroy(): void {
-		this.unsubscribe$.next();
-		this.unsubscribe$.complete();
-	}
 }
