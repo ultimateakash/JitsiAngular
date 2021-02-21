@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { JitsiComponent } from './jitsi/jitsi.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JitsiComponent,
+    ThankYouComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+.fas {
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.item-center {
+    text-align: center;
+}
+
+.grey-color {
+    color: grey;
+}
+
+.red-color {
+    color: red;
+}
